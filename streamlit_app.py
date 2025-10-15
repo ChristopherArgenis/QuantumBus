@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import io
 from datetime import datetime
 
-st.set_page_config(page_title='Week Science — Markov · Streamlit', layout='wide')
+st.set_page_config(page_title='Semana de Ciencias — Markov · Streamlit', layout='wide')
 
 # --- Sample data (from your notebook) ---
 SAMPLE_DATA = """Ruta,Subida,Bajada,Fecha,Sentado,Parada
@@ -201,13 +201,13 @@ else:
 st.caption('Sugerencia: si la animación es lenta en tu entorno, usa el modo Manual.')
 
 # --- Sugerencias / mejoras posibles (sorpresas) ---
-st.header('Sugerencias adicionales (te pude sorprender)')
-st.markdown('''
-- Añadir una página de "Análisis de Markov" donde se muestre la matriz de transición entre estados (si tus datos tienen estados por paso).
-- Agregar export de resultados de simulación (CSV / figura).
-- Reemplazar matplotlib por Plotly para interactividad (zoom, hover) en el navegador.
-- Incluir tests unitarios y un pequeño README con comandos para desplegar.
-- Implementar cache para datasets grandes usando @st.cache_data.
-''')
+# st.header('Sugerencias adicionales (te pude sorprender)')
+# st.markdown('''
+# - Añadir una página de "Análisis de Markov" donde se muestre la matriz de transición entre estados (si tus datos tienen estados por paso).
+# - Agregar export de resultados de simulación (CSV / figura).
+# - Reemplazar matplotlib por Plotly para interactividad (zoom, hover) en el navegador.
+# - Incluir tests unitarios y un pequeño README con comandos para desplegar.
+# - Implementar cache para datasets grandes usando @st.cache_data.
+# ''')
 
-st.markdown('Si quieres, lo convierto a un único archivo `app.py` listo para ejecutar y te doy los pasos para desplegarlo en Streamlit Cloud o en tu máquina.')
+# st.markdown('Si quieres, lo convierto a un único archivo `app.py` listo para ejecutar y te doy los pasos para desplegarlo en Streamlit Cloud o en tu máquina.')
