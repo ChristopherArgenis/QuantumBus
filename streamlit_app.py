@@ -154,13 +154,3 @@ else:
         fig3 = px.histogram(x=data_view, nbins=50, title=f'Histograma — {i+chunk} muestras')
         placeholder.plotly_chart(fig3, use_container_width=True)
         time.sleep(0.15)
-
-# --- 5) Cadena de Markov (mapa de calor) ---
-st.header('5) Cadena de Markov — Mapa de calor de transiciones')
-if 'Ruta' in df.columns:
-    states = df['Ruta'].astype(str).values
-    trans_matrix = pd.crosstab(pd.Series(states[:-1], name='From'), pd.Series(states[1:], name='To'), normalize='index')
-    fig_heat = px.imshow(trans_matrix, text_auto=True, color_continuous_scale='Viridis', title='Matriz de transición (probabilidades)')
-    st.plotly_chart(fig_heat, use_container_width=True)
-else:
-    st.info('No se encontró la columna "Ruta" para calcular la cadena de Markov.')
